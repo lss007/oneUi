@@ -98,22 +98,22 @@
               <h2 class="content-headingLg border-bottom mb-2 pb-2">Stammdaten</h2>
               <h4 class="content-heading border-bottom mb-4 pb-2">Kontakatinformationen</h4>
               <b-row>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Kunde" label-for="fld1">
                     <b-form-input id="fld1" placeholder="Kunde" value="Herr Testkunde für Classic"></b-form-input>
                   </b-form-group>
                 </b-col>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Lieferadresse">
                     <v-select v-model="vSelectOptionsSelected" :options="vSelectOptionsMultiple" placeholder="Choose a value.."></v-select>
                   </b-form-group>
                 </b-col>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Postadresse">
                     <v-select v-model="postOptionsSelected" :options="postOptions" placeholder="Choose a value.."></v-select>
                   </b-form-group>
                 </b-col>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Rechnungsadresse">
                     <v-select v-model="billingAddressSelected" :options="billingAddress" placeholder="Choose a value.."></v-select>
                   </b-form-group>
@@ -121,27 +121,27 @@
               </b-row>
               <h4 class="content-heading border-bottom mb-4 pb-2">Info</h4>
               <b-row>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Titel" label-for="titleFld">
                     <b-form-input id="titleFld" placeholder="Title" value=""></b-form-input>
                   </b-form-group>
                 </b-col>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Angebotsnummer" label-for="oerderNoFld">
                     <b-form-input id="oerderNoFld" placeholder="Angebotsnummer" value="1000"></b-form-input>
                   </b-form-group>
                 </b-col>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Datum" label-for="dateFld">
                     <b-form-input id="dateFld" placeholder="Date" value="15-10-2019"></b-form-input>
                   </b-form-group>
                 </b-col>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Mitarbeiter">
                     <v-select v-model="employeOptionsSelected" :options="employeOptions" placeholder="Choose a value.."></v-select>
                   </b-form-group>
                 </b-col>
-                <b-col lg="6">
+                <b-col md="6">
                   <b-form-group label="Status">
                     <v-select v-model="statusOptionsSelected" :options="statusOptions" placeholder="Choose a value.."></v-select>
                   </b-form-group>
@@ -152,10 +152,10 @@
                 <b-form-textarea id="textareaFld1" rows="4" placeholder="Textarea content.."></b-form-textarea>
               </b-form-group>
               <h4 class="content-heading border-bottom mb-4 pb-2">Angebotspositionen</h4>
-              <b-table-simple responsive striped table-class="table-vcenter">
+              <b-table-simple responsive table-class="table-vcenter" class="xsText mw-1000">
                 <b-thead>
                   <b-tr>
-                    <b-th>
+                    <b-th width="170px">
                       Position
                     </b-th>
                     <b-th>Name</b-th>
@@ -170,9 +170,9 @@
                 <b-tbody>
                   <b-tr>
                     <b-td colspan="8">
-                      <span class="mdTitle">elements </span>
+                      <span class="xsTitle text-uppercase">elements </span>
                       <span class="plusIconDD">
-                        <b-dropdown id="dropdown-right" right  variant="success">
+                        <b-dropdown id="dropdown-right" right  size="sm" variant="success">
                           <template #button-content>
                             <i class="ace-icon fa fa-plus"></i>
                           </template>
@@ -217,20 +217,337 @@
                         <b-button size="sm" variant="alt-primary">
                           <i class="fa fa-fw fa-pencil-alt"></i>
                         </b-button>
-                        <b-button size="sm" variant="alt-primary">
+                        <b-button size="sm" variant="alt-success">
                           <i class="fa fa-fw fa-plus"></i>
                         </b-button>
-                        <b-button size="sm" variant="alt-primary">
+                        <b-button size="sm" variant="alt-info">
                           <i class="far fa-fw fa-file"></i>
                         </b-button>
-                        <b-button size="sm" variant="alt-primary">
+                        <b-button size="sm" variant="alt-danger">
                           <i class="far fa-fw fa-trash-alt"></i>
                         </b-button>
                       </b-btn-group>
                     </b-td>
                   </b-tr>
+                  <b-tr>
+                    <b-td>
+                    </b-td>
+                    <b-td>2 Zaunfeld Modell Berlin</b-td>
+                    <b-td>
+                      <b-input-group append="lfm">
+                        <b-form-input type="text" value="2.37"></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="EUR">
+                        <b-form-input type="text" value="178.78"></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="%">
+                        <b-form-input type="text" value="0"></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="%">
+                        <b-form-input type="text" value="16"></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="EUR">
+                        <b-form-input type="text" value="24.34" disabled></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td class="text-center">
+                      <b-btn-group>
+                        <b-button size="sm" variant="alt-primary">
+                          <i class="fa fa-fw fa-pencil-alt"></i>
+                        </b-button>
+                        <b-button size="sm" variant="alt-success">
+                          <i class="fa fa-fw fa-plus"></i>
+                        </b-button>
+                        <b-button size="sm" variant="alt-info">
+                          <i class="far fa-fw fa-file"></i>
+                        </b-button>
+                        <b-button size="sm" variant="alt-danger">
+                          <i class="far fa-fw fa-trash-alt"></i>
+                        </b-button>
+                      </b-btn-group>
+                    </b-td>
+                  </b-tr>
+                  <b-tr>
+                    <b-td colspan="8">
+                      <span class="xsTitle text-uppercase">Einzelartikel </span>
+                      <span class="plusIconDD">
+                        <b-dropdown id="dropdown-right" right  size="sm"   variant="success">
+                          <template #button-content>
+                            <i class="ace-icon fa fa-plus"></i>
+                          </template>
+                          <b-dropdown-item href="#">Items</b-dropdown-item>
+                          <b-dropdown-item href="#">Subtotal</b-dropdown-item>
+                          <b-dropdown-item href="#">Heading</b-dropdown-item>
+                        </b-dropdown>
+                      </span>
+                    </b-td>
+                  </b-tr>
+                  <b-tr>
+                    <b-td>
+                    </b-td>
+                    <b-td>1 Zaunfeld Modell Berlin</b-td>
+                    <b-td>
+                      <b-input-group append="lfm">
+                        <b-form-input type="text" value="2.37"></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="EUR">
+                        <b-form-input type="text" value="178.78"></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="%">
+                        <b-form-input type="text" value="0"></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="%">
+                        <b-form-input type="text" value="16"></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="EUR">
+                        <b-form-input type="text" value="24.33" disabled></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td class="text-center">
+                      <b-btn-group>
+                        <b-button size="sm" variant="alt-primary">
+                          <i class="fa fa-fw fa-pencil-alt"></i>
+                        </b-button>
+                        <b-button size="sm" variant="alt-success">
+                          <i class="fa fa-fw fa-plus"></i>
+                        </b-button>
+                        <b-button size="sm" variant="alt-info">
+                          <i class="far fa-fw fa-file"></i>
+                        </b-button>
+                        <b-button size="sm" variant="alt-danger">
+                          <i class="far fa-fw fa-trash-alt"></i>
+                        </b-button>
+                      </b-btn-group>
+                    </b-td>
+                  </b-tr>
+                  <b-tr>
+                    <b-td colspan="8">
+                      <span class="xsTitle text-uppercase">Dienstleistungen </span>
+                    </b-td>
+                  </b-tr>
+                  <b-tr>
+                    <b-td colspan="8">
+                      <span class="xsTitle text-uppercase">Summe</span>
+                    </b-td>
+                  </b-tr>
+                  <b-tr>
+                    <b-td align="right" colspan="6">
+                      Gesamt netto (inkl. Rabatte, ohne optionale Positionen)
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="EUR">
+                        <b-form-input type="text" value="73.00" disabled></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td></b-td>
+                  </b-tr>
+                  <b-tr>
+                    <b-td align="right" colspan="6">
+                      Umsatzsteuer
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="EUR">
+                        <b-form-input type="text" value="00.00" disabled></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td></b-td>
+                  </b-tr>
+                  <b-tr>
+                    <b-td align="right" colspan="6">
+                      <span class="bold">Gesamt brutto</span>
+                    </b-td>
+                    <b-td>
+                      <b-input-group append="EUR">
+                        <b-form-input type="text" value="73.00" disabled></b-form-input>
+                      </b-input-group>
+                    </b-td>
+                    <b-td></b-td>
+                  </b-tr>
                 </b-tbody>
               </b-table-simple>
+
+              <h4 class="content-heading border-bottom mb-4 pb-2"> <span class="collapseTriggerStyle" v-b-toggle.faq1-q1>Montageleistungen</span></h4>
+              <b-collapse id="faq1-q1">
+                <b-table-simple responsive table-class="table-vcenter" class="xsText mw-1000">
+                  <b-thead>
+                    <b-tr>
+                      <b-th width="170px">
+                        Position
+                      </b-th>
+                      <b-th>Name</b-th>
+                      <b-th>Menge</b-th>
+                      <b-th>Preis pro Einheit</b-th>
+                      <b-th>Preis</b-th>
+                      <b-th></b-th>
+                    </b-tr>
+                  </b-thead>
+                  <b-tbody>
+                    <b-tr>
+                      <b-td>1</b-td>
+                      <b-td><b-form-input id="fld1" placeholder="Kunde" value="Anfahrt zur Montage bis 75km"></b-form-input></b-td>
+                      <b-td>
+                        <b-input-group append="Stk">
+                          <b-form-input type="text" value="0"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="90"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="00"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td class="text-center">
+                        <b-btn-group>
+                          <b-button size="sm" variant="alt-danger">
+                            <i class="far fa-fw fa-trash-alt"></i>
+                          </b-button>
+                        </b-btn-group>
+                      </b-td>
+                    </b-tr>
+                    <b-tr>
+                      <b-td>2</b-td>
+                      <b-td><b-form-input id="fld1" placeholder="Kunde" value="Anfahrt zur Montage bis 150km"></b-form-input></b-td>
+                      <b-td>
+                        <b-input-group append="Stk">
+                          <b-form-input type="text" value="0"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="150"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="00"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td class="text-center">
+                        <b-btn-group>
+                          <b-button size="sm" variant="alt-danger">
+                            <i class="far fa-fw fa-trash-alt"></i>
+                          </b-button>
+                        </b-btn-group>
+                      </b-td>
+                    </b-tr>
+                    <b-tr>
+                      <b-td>3</b-td>
+                      <b-td><b-form-input id="fld1" placeholder="Kunde" value="Anfahrt zur Montage bis 250km"></b-form-input></b-td>
+                      <b-td>
+                        <b-input-group append="Stk">
+                          <b-form-input type="text" value="0"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="220"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="00"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td class="text-center">
+                        <b-btn-group>
+                          <b-button size="sm" variant="alt-danger">
+                            <i class="far fa-fw fa-trash-alt"></i>
+                          </b-button>
+                        </b-btn-group>
+                      </b-td>
+                    </b-tr>
+                    <b-tr>
+                      <b-td>4</b-td>
+                      <b-td><b-form-input id="fld1" placeholder="Kunde" value="Arbeitsleistung nach Aufwand"></b-form-input></b-td>
+                      <b-td>
+                        <b-input-group append="Stk">
+                          <b-form-input type="text" value="0"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="49"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="00"></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td class="text-center">
+                        <b-btn-group>
+                          <b-button size="sm" variant="alt-danger">
+                            <i class="far fa-fw fa-trash-alt"></i>
+                          </b-button>
+                        </b-btn-group>
+                      </b-td>
+                    </b-tr>
+                    <b-tr>
+                      <b-td></b-td>
+                      <b-td colspan="3">
+                        Summe
+                      </b-td>
+                      <b-td>
+                        <b-input-group append="EUR">
+                          <b-form-input type="text" value="00" disabled></b-form-input>
+                        </b-input-group>
+                      </b-td>
+                      <b-td class="text-center">
+                      </b-td>
+                    </b-tr>
+                  </b-tbody>
+                </b-table-simple>
+              </b-collapse>
+              <h4 class="content-heading border-bottom mb-4 pb-2">Fußzeile</h4>
+              <b-form-group>
+                <b-form-textarea id="textareaFld2" rows="4" placeholder="Textarea content.."></b-form-textarea>
+              </b-form-group>
+              <h4 class="content-heading border-bottom mb-4 pb-2">Konditionen</h4>
+              <b-row>
+                <b-col md="6">
+                  <b-form-group label="Lieferbedingungen">
+                    <v-select v-model="dtOptionsSelected" :options="dtOptions" placeholder="Choose a value.." disabled></v-select>
+                  </b-form-group>
+                </b-col>
+                <b-col md="6">
+                  <b-form-group label="Lieferbedingungen">
+                    <v-select v-model="paymentTermOptionsSelected" :options="paymentTermOptions" placeholder="Choose a value.." disabled></v-select>
+                  </b-form-group>
+                </b-col>
+                <b-col md="6">
+                  <b-form-checkbox class="custom-control-primary mb-2" value="primary">Manuell geändert</b-form-checkbox>
+                </b-col>
+              </b-row>
+
+              <div class="formBtnsCol py-3">
+                <b-form-row>
+                  <b-col cols="12" sm="auto" class="py-2"><b-button class="w-100" type="button" variant="primary">Speichern</b-button></b-col>
+                  <b-col cols="12" sm="auto" class="py-2"><b-button class="w-100" type="button" variant="primary">Angebot versenden</b-button></b-col>
+                  <b-col cols="12" sm="auto" class="py-2"><b-button class="w-100" type="button" variant="primary" disabled>Auftrag Erstellen</b-button></b-col>
+                </b-form-row>
+              </div>
+
+
             </b-form>
           </b-tab>
         </b-tabs>
@@ -268,6 +585,10 @@ export default {
       employeOptionsSelected: null,
       statusOptions: ['angenommen', 'Option 2'],
       statusOptionsSelected: null,
+      dtOptions: ['ab Werk', 'Frei Haus'],
+      dtOptionsSelected: null,
+      paymentTermOptions: ['Normale Firma', 'VIP Firma'],
+      paymentTermOptionsSelected: null,
 
     }
   }

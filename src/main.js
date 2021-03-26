@@ -42,7 +42,7 @@ Vue.directive('toggle-class', toggleClass)
 // Disable tip shown in dev console when in development mode
 Vue.config.productionTip = false
 
-require('@/assets/css/custom-style.css')  
+require('@/assets/css/custom-style.css')
 // Craft new application
 new Vue({
   store,

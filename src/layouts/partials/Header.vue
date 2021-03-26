@@ -18,7 +18,7 @@
           </base-layout-modifier>
           <!-- END Toggle Mini Sidebar -->
 
-          <a href="javascript:void(0)" class="ml-3"><img src="https://zz-erp.dev2.saas.do/custom/assets/images/logo.png" alt="logo" style="width: 90px;"></a>
+          <a href="javascript:void(0)" class="ml-1 ml-sm-3"><img src="https://zz-erp.dev2.saas.do/custom/assets/images/logo.png" alt="logo" style="width: 90px;"></a>
 
         </div>
         <!-- END Left Section -->
@@ -29,8 +29,9 @@
           <b-dropdown size="sm" variant="dual" class="d-inline-block ml-2" menu-class="p-0 border-0 dropdown-menu-md" right no-caret ref="oneDropdownDefaultUser">
             <template #button-content>
               <div class="d-flex align-items-center">
-                <span class="d-none d-sm-inline-block ml-2">Thorsten Winternheimer</span>
-                <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block ml-1 mt-1"></i>
+                <span class="d-inline-block d-md-none"><img class="rounded-circle" src="img/avatars/avatar0.jpg" alt="Header Avatar" style="width: 21px;"></span>
+                <span class="d-none d-md-inline-block ml-2">Thorsten Winternheimer</span>
+                <i class="fa fa-fw fa-angle-down d-inline-block ml-1 mt-1"></i>
               </div>
             </template>
             <li @click="$refs.oneDropdownDefaultUser.hide(true)">
