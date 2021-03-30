@@ -102,6 +102,46 @@ html {
 
 
 
+.badge.statusDot {
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	color: transparent;
+	line-height: 1;
+	padding: 0;
+	overflow: hidden;
+}
+.pickingScreen, .inventurscanScreen {
+	max-width: 850px;
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.proImg1 {
+	width: 200px;
+	height: auto;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+.minWdBtn {
+	min-width: 120px;
+}
+.thNowrap > thead > tr > th {
+	white-space: nowrap;
+}
+.scanRightImgCol {
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	padding: 20px 40px;
+	border: 1px solid rgba(0,0,0,0.25);
+	margin-top: 10px;
+}
+
+
+
 @media (max-width:1600px) {
 	.content, #page-header .content-header {
 		padding-left: 15px;
@@ -112,5 +152,16 @@ html {
 @media (max-width:1350px) {
 	.nav-link {
 		padding: 0.3rem 0.8rem;
+	}
+}
+@media (max-width:991px) {
+	.pickingScreen, .inventurscanScreen {
+		padding: 20px;
+		max-width: 100%;
+	}
+}
+@media(max-width:575px) {
+	.pickingScreen, .inventurscanScreen {
+		padding: 15px;
 	}
 }

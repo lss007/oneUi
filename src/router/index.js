@@ -20,6 +20,11 @@ const Landing = () => import("@/views/Landing.vue")
 // Backend: General
 const Dashboard = () => import(/* webpackChunkName: "pages-dashboard", webpackPrefetch: true */"@/views/Dashboard.vue")
 const Angebote = () => import("@/views/Angebote.vue")
+const Entnahme_Kleinteile = () => import("@/views/Entnahme_Kleinteile.vue")
+const Picking_Screen = () => import("@/views/Picking_Screen.vue")
+const Erwartete_Wareneingange = () => import("@/views/Erwartete_Wareneingange.vue")
+const Inventur = () => import("@/views/Inventur.vue")
+
 
 // Backend: Blocks
 const BlockStyles = () => import("@/views/blocks/Styles.vue")
@@ -334,6 +339,26 @@ export default new Router({
           path: 'angebote',
           name: 'Angebote',
           component: Angebote
+        },
+        {
+          path: 'entnahme-kleinteile',
+          name: 'Entnahme_Kleinteile',
+          component: Entnahme_Kleinteile
+        },
+        {
+          path: 'picking-screen',
+          name: 'Picking_Screen',
+          component: Picking_Screen
+        },
+        {
+          path: 'erwartete-wareneingange',
+          name: 'Erwartete_Wareneingange',
+          component: Erwartete_Wareneingange
+        },
+        {
+          path: 'inventur',
+          name: 'Inventur',
+          component: Inventur
         },
         {
           path: 'blocks',
